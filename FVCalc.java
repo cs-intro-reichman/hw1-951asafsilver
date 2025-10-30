@@ -15,14 +15,6 @@ public class FVCalc {
 		}
 		Grow = Grow / 100; // אחוז הגדילה
 		double futureVal = CurrentValue*Math.pow(1+Grow, years); // מכפיל את הערך הראשוני באחוז הגדילה בחזקת השנים
-		System.out.println("the new value is " + futureVal);
-
-
-
-
-	
-	
-		
-
+		System.out.println("the new value is" + futureVal);
 	}
 }
