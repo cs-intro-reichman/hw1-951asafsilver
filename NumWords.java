@@ -10,6 +10,6 @@ public class NumWords {
 		int hundreds = input/100; // ספרת מאות
 		int tens = (input/10)%10;// ספרת עשרות
 		int ones = input % 10; // ספרת יחידות
-		System.out.println(hundreds + " hundreds, " + tens  + " tens, and " +ones + " ones" );
+		System.out.println(hundreds + " hundreds, " + tens  + " tens, and " +ones + " ones." );
 	}
 }
