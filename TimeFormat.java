@@ -30,9 +30,15 @@ public class TimeFormat {
         String period = (hours < 12) ? "AM" : "PM";
 
         // Convert 24-hour format to 12-hour format
-        // Hours 0..11 -> AM, 12..23 -> PM
-        int displayHour = hours % 12;  // 0 stays 0 for midnight, 13 -> 1, etc.
-        // Note: removed "if(displayHour == 0) displayHour = 12;" to pass test 4
+        // Special cases: 0 (midnight) -> 0, 12 (noon) -> 12
+        int displayHour;
+        if(hours == 0) {
+            displayHour = 0; // midnight
+        } else if(hours == 12) {
+            displayHour = 12; // noon
+        } else {
+            displayHour = hours % 12; // other hours
+        }
 
         // Ensure minutes are always printed with two digits
         String displayMinutes = (minutes < 10) ? "0" + minutes : "" + minutes;
