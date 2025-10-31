@@ -11,8 +11,7 @@ public class Bill3 {
 		// מחלק את הסכום לשלוש ושומר כDOUBLE
 		double SharePrice = (double) IntTotal / 3.0;
 		double UpPrice = Math.ceil(SharePrice);
-		//System.out.println("Dear" + name3 + "," + name2+ "," + name1 + " Pay " + UpPrice + "Shekel each");
-		System.out.println("Dear " + name3 + ", " + name2 + ", " + name1 + ": pay " + UpPrice + " Shekels each.");
+		System.out.println("Dear " + name3 + ", " + name2 + ", and " + name1 + ": pay " + UpPrice + " Shekels each");
 		
 
 		
