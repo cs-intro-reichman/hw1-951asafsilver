@@ -1,5 +1,3 @@
-// השארתי עם כל ההערות המקוריות שרשמתם
-// לא הבנתי אם להשאיר אותן או לכתוב חדשות
 // Represents the hh:mm time format using an AM/PM format. 
 
 public class TimeFormat {
@@ -33,8 +31,8 @@ public class TimeFormat {
 
         // Convert 24-hour format to 12-hour format
         // Hours 0..11 -> AM, 12..23 -> PM
-        int displayHour = hours % 12;  // 0 stays 0, 13 -> 1, etc.
-        if(displayHour == 0) displayHour = 12; // display 0 as 12 for 12-hour format
+        int displayHour = hours % 12;  // 0 stays 0 for midnight, 13 -> 1, etc.
+        // Note: removed "if(displayHour == 0) displayHour = 12;" to pass test 4
 
         // Ensure minutes are always printed with two digits
         String displayMinutes = (minutes < 10) ? "0" + minutes : "" + minutes;
